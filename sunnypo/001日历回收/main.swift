@@ -9,7 +9,7 @@ var month = (dateNumber - year * 10000 - date) / 100
 if dateNumber - (dateNumber / 10000 * 10000) < 100 || month > 12{
     show("Please enter a correct date.")
 } else {
-    if year % 4 == 0 && month > 2 {
+    if year % 4 == 0 && month > 2 || year % 100 == 0 && month > 2{
         finalResult += 1
     }
     for i in 1 ... month {
@@ -26,10 +26,3 @@ if dateNumber - (dateNumber / 10000 * 10000) < 100 || month > 12{
         show("\(year) has passed \(finalResult) days.")
     }
 }
-
-/*show(dateNumber ?? 0)
-show(year)
-show(date)
-show(month)
-show(finalResult)
- */
